@@ -1,0 +1,38 @@
+{
+    "name": "silverstripe/silverstripe-omnipay",
+    "description": "SilverStripe Omnipay Payment Module",
+    "type": "silverstripe-vendormodule",
+    "license": "BSD-3-Clause",
+    "keywords": ["silverstripe","payment","omnipay"],
+    "require": {
+        "silverstripe/recipe-core": "^1.0.2",
+        "omnipay/common": "^2.4"
+    },
+    "require-dev": {
+        "silverstripe/versioned" : "^1.0",
+        "phpunit/phpunit": "^5.7",
+        "guzzle/guzzle": "^3.9",
+        "omnipay/paypal": "^2.5",
+        "omnipay/dummy": "^2.1",
+        "omnipay/paymentexpress": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\Omnipay\\": "src/",
+            "SilverStripe\\Omnipay\\Tests\\": "tests/"
+        }
+    },
+    "extra" : {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        }
+    },
+    "scripts": {
+        "lint": "phpcs -s src/ tests/"
+    },
+    "suggest": {
+        "bummzack/silverstripe-omnipay-ui": "Adds UI Components to manage payments in the SilverStripe CMS."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
